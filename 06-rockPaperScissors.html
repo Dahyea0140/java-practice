@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Ppaer Scissor</title>
+</head>
+
+<body>
+    <p>
+        Rock Paper Scissor
+    </p>
+    <button onclick="
+    let randomNumber=Math.floor(Math.random()*3);
+
+    let result= '';
+    let computerMove = '';
+
+    if(randomNumber === 0){
+    computerMove = 'rock'
+    result = 'Tie'
+    } else if(randomNumber === 1){
+    computerMove = 'paper'
+    result = 'Lose' 
+    }else{
+    computerMove = 'Scissor'
+    result = 'Win'
+    }
+
+    alert(`You picked rock.Computer picked ${computerMove}.${result}`)
+    
+    ">Rock</button>
+    <button onclick="
+    let randomNumber=Math.floor(Math.random()*3);
+
+    let result= '';
+    let computerMove = '';
+
+    if(randomNumber === 0){
+    computerMove = 'rock'
+    result = 'Win'
+    } else if(randomNumber === 1){
+    computerMove = 'paper'
+    result = 'Tie' 
+    }else{
+    computerMove = 'Scissor'
+    result = 'Lose'
+    }
+
+    alert(`You picked paper.Computer picked ${computerMove}.${result}`)
+    
+    ">Paper</button>
+    <button onclick="
+    let randomNumber=Math.floor(Math.random()*3);
+
+    let result= '';
+    let computerMove = '';
+
+    if(randomNumber === 0){
+    computerMove = 'rock'
+    result = 'Lose'
+    } else if(randomNumber === 1){
+    computerMove = 'paper'
+    result = 'Win' 
+    }else{
+    computerMove = 'Scissors'
+    result = 'Tie'
+    }
+
+    alert(`You picked scissors.Computer picked ${computerMove}.${result}`)
+    
+    ">Scissors</button>
+</body>
+
+</html>
