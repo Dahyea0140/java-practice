@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*\\COLORS*/
+    --BACKGROUND-COLOR: #000;
+    --NUM-BACKGROUND-COLOR: #373737;
+    --NUM-COLOR: white;
+    --SIGN-COLOR: rgb(247, 164, 11);
+    
+
+    /*|| BORDERS*/
+    --NUM-BORDER: 1px solid whitesmoke;
+    --NUM-BORDER-WIDTH: 70px;
+    --NUM-BORDER-HEIGHT: 70px;
+    --NUM-BORDER-RADIUS: 50%;
+
+    /*\\ FONT SIZING*/
+    --FF:"Nunito", sans-serif;
+    --FF-SIZE: 1.5rem;
+    
+
+    /*|| PADDING*/
+    --NUM-PADDING: 1rem;
+    /* || MARGIN */
+    --NUM-MARGIN: 0.5rem;
+}
+
+body{
+    background-color: var(--BACKGROUND-COLOR);
+}
+
+.grid{
+    display: grid;
+    justify-content: center;
+}
+
+.buttons{
+    font-size: var(--FF-SIZE);
+    font-family: var(--FF);
+    padding: var(--NUM-PADDING);
+    margin: var(--NUM-MARGIN);
+    width: var(--NUM-BORDER-WIDTH);
+    height: var(--NUM-BORDER-HEIGHT);
+    border: var(--NUM-BORDER);
+    border-radius: var(--NUM-BORDER-RADIUS);
+}
+
+.buttons__numbers{
+    background-color: var(--NUM-BACKGROUND-COLOR);
+    color: var(--NUM-COLOR);
+}
+
+.buttons__signs{
+    background-color: var(--SIGN-COLOR);
+    color: var(--NUM-COLOR);
+}
+
+.buttons___clear{
+    text-align: center;
+    font-size: 17px;
+}

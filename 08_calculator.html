@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="08_calculator.css" text="text/css">
+</head>
+
+<body>
+    <section class="grid">
+        <p>
+            <button class="buttons buttons__numbers" onclick="
+        button_function('1')
+        " class="button_num">1</button>
+
+            <button class="buttons buttons__numbers" onclick="
+        button_function('2')
+        " class="button_num">2</button>
+
+            <button class="buttons buttons__numbers" onclick="
+        button_function('3')
+        " class="button_num">3</button>
+
+            <button class="buttons buttons__signs" onclick="
+        button_function(' + ')
+        ">+</button>
+        </p>
+
+        <p>
+            <button class="buttons buttons__numbers" onclick="
+        button_function('4')
+        ">4</button>
+
+            <button class="buttons buttons__numbers" onclick="
+        button_function('5')
+        ">5</button>
+
+            <button class="buttons buttons__numbers" onclick="
+        button_function('6')
+        ">6</button>
+
+            <button class="buttons buttons__signs" onclick="
+        button_function(' - ')
+        ">-</button>
+        </p>
+        <p>
+            <button class="buttons buttons__numbers" onclick="
+        button_function('7')
+        ">7</button>
+
+            <button class="buttons buttons__numbers" onclick="
+        button_function('8')
+        ">8</button>
+
+            <button class="buttons buttons__numbers" onclick="
+        button_function('9')
+        ">9</button>
+
+            <button class="buttons buttons__signs" onclick="
+        button_function(' * ' )       
+        ">*</button>
+        </p>
+        <p>
+            <button class="buttons buttons__numbers" onclick="
+        button_function('0')
+        ">0</button>
+
+            <button class="buttons buttons__numbers" onclick="
+        button_function('.')
+        ">.</button>
+
+            <button class="buttons buttons__numbers" onclick="
+        evaluation(calculation)
+        ">=</button>
+
+            <button class="buttons buttons__signs" onclick="
+        button_function('/')
+        ">/</button>
+        </p>
+        <p>
+            <button class="buttons buttons__numbers buttons___clear" onclick="
+        calculation = ''
+        console.log('Cleared')
+        ">Clear</button>
+        </p>
+    </section>
+</body>
+<script>
+    let calculation = '';
+    localStorage.setItem('history', 'calculation')
+
+    function button_function(button) {
+        calculation += button
+        return console.log(calculation)
+    }
+
+    function evaluation(calculation) {
+        calculation = eval(calculation)
+        return console.log(calculation)
+    }
+</script>
+
+</html>
