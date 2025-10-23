@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <button onclick="
+    playGame('heads')
+    ">heads</button>
+
+    <button onclick="
+    playGame('tails')
+    ">tails</button>
+
+    <script>
+        const randomNumber = Math.random();
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        let score = {
+            win: 0,
+            losses: 0
+        }
+
+        result === pickedMove ? score.win++ : score.losses++;
+        console.log(guess === result ? 'You win!' : 'You lose!');
+
+        function playGame(guess) {
+            let pickedMove = guess;
+            return pickedMove;
+        }
+
+        function computerMove() {
+            const randomNumber = Math.random();
+            const result = randomNumber < 0.5 ? 'heads' : 'tails';
+        }
+
+
+
+        alert(`You picked ${pickedMove}.Computer picked ${result}.`)
+    </script>
+</body>
+
+</html>
