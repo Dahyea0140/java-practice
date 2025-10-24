@@ -5,7 +5,7 @@
 
 <body>
     <button onclick="
-    playGame('heads')
+    playGame('heads') 
     ">heads</button>
 
     <button onclick="
@@ -13,30 +13,31 @@
     ">tails</button>
 
     <script>
-        const randomNumber = Math.random();
-        const result = randomNumber < 0.5 ? 'heads' : 'tails';
-
-        let score = {
+        const score = JSON.parse(localStorage.getItem('score')) || {
             win: 0,
             losses: 0
         }
 
-        result === pickedMove ? score.win++ : score.losses++;
-        console.log(guess === result ? 'You win!' : 'You lose!');
 
-        function playGame(guess) {
-            let pickedMove = guess;
-            return pickedMove;
-        }
+        function playGame(playerMove) {
 
-        function computerMove() {
+            let outcome = '';
+
             const randomNumber = Math.random();
-            const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+            let computerMove = randomNumber < 0.5 ? 'heads' : 'tails';
+
+            playerMove === computerMove ? outcome = 'You win!' : outcome = 'You lose!'
+
+            computerMove === playerMove ? score.win++ : score.losses++;
+
+            localStorage.setItem('score', JSON.stringify(score));
+
+            alert(`You picked ${playerMove}.Computer picked ${computerMove}.${outcome}
+Win:${score.win},Losses: ${score.losses}`)
         }
 
 
-
-        alert(`You picked ${pickedMove}.Computer picked ${result}.`)
     </script>
 </body>
 
