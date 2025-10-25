@@ -63,6 +63,10 @@ body{
     color: var(--NUM-COLOR);
 }
 
+.clear_button{
+    text-align: center;
+}
+
 .buttons___clear{
     text-align: center;
     font-size: 17px;
