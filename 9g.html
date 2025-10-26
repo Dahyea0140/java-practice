@@ -19,8 +19,21 @@
 
     <p class="js-cost-display"></p>
 
+    <input placeholder="Type something" class="js-typebox"">
+
+    <p class=" js-type"></p>
+
 
     <script>
+
+        const inputElement = document.querySelector('.js-typebox');
+
+        const ouputElement = document.querySelector('.js-type')
+
+        inputElement.addEventListener('keyup', () => {
+            ouputElement.innerHTML = inputElement.value
+        })
+
         function handleCostKeyDown(event) {
             if (event.key === 'Enter') {
                 calculateTotal();

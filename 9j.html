@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="08_calculator.css" text="text/css">
 </head>
 
 <body>
-    <p class="display"></p>
-
     <section class="box">
+        <p class="display">'hello'</p>
+
         <p>
             <button class="buttons buttons__numbers" onclick="
         button_function('1')
@@ -94,6 +93,9 @@
 
     document.querySelector('.display')
         .innerHTML = localStorage.getItem('history');
+
+
+
 
     function button_function(button) {
         calculation += button

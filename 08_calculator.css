@@ -37,6 +37,11 @@ body{
     background-color: var(--BACKGROUND-COLOR);
 }
 
+.display {
+    font-size: var(--FF-SIZE);
+    font-family: var(--FF);
+}
+
 .grid{
     display: grid;
     justify-content: center;
