@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <h3>What is the Capital of Bangladesh?</h3>
+            <p class="display"></p>
+            <button class="js_wrong_button">New York</button>
+            <button class="js_wrong_button">Tokyo</button>
+            <button class="js_right_button">Dhaka</button>
+            <button class="js_wrong_button">Rio</button>
+            <button class="js_wrong_button">Sydney</button>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>What is the unit of resistance?</h3>
+            <p class="display2"></p>
+            <input placeholder="Answer" class="second_answer">
+            <button onclick="
+            correctAnswer();
+            ">Check Answer</button>
+
+        </div>
+    </div>
+    <script>
+        const incorrect = document.querySelectorAll('.js_wrong_button');
+        const correct = document.querySelector(".js_right_button");
+        const display = document.querySelector(".display");
+        const part_2 = document.querySelector(".second_answer")
+        const display_2 = document.querySelector(".display2")
+
+
+        incorrect.forEach(incorrect => {
+            incorrect.addEventListener("click", () => {
+                resetButton()
+                incorrect.style.background = "rgb(238, 76, 70)"
+                display.textContent = "Incorrect"
+                display.style.color = "rgb(238, 76, 70)"
+            })
+        })
+
+
+        correct.addEventListener("click", () => {
+            resetButton()
+            correct.style.background = "rgb(177, 245, 67)"
+            display.textContent = "Correct"
+            display.style.color = "Green"
+        })
+
+        function correctAnswer() {
+            if (part_2.value === "Ohm") {
+                display_2.textContent = "Correct"
+                part_2.style.background = "Green"
+                display_2.style.color = "Green"
+            } else {
+                display_2.textContent = "Incorrect"
+                part_2.style.background = "rgb(238, 76, 70)"
+                display_2.style.color = "rgb(238, 76, 70)"
+            }
+        }
+
+
+
+        function resetButton() {
+            incorrect.forEach(btn => {
+                btn.style.background = '';
+            })
+            correct.style.background = '';
+        }
+
+
+
+    </script>
+</body>
+
+</html>
