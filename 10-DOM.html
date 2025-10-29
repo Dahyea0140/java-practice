@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="10-DOM.css">
+    <title>DOM projects</title>
+</head>
+
+<body>
+    <p>Youtube subscribe button</p>
+    <button onclick="
+    subscribe();
+    " class="js-button subscribe-button">Subscribe</button>
+
+
+
+    <p>Amazon Shipping Calculator</p>
+
+    <p>Orders under $40 = +$10</p>
+
+    <P>Orders over $40 = FREE shipping</P>
+
+    <input placeholder="Cost of order" class="js-cost-input input-box" onkeydown="
+        handleCostKeyDown(event);
+    ">
+
+
+    <button class="calculate-button calculate_css" onclick="
+        calculateTotal();
+    ">Claculate</button>
+
+    <p class="js-cost-display"></p>
+
+
+    <script>
+        function handleCostKeyDown(event) {
+            if (event.key === 'Enter') {
+                calculateTotal();
+            }
+        }
+
+
+        function calculateTotal() {
+            const inputElement = document.querySelector(".js-cost-input");
+
+            let cost = Number(inputElement.value);
+
+            if (cost < 40) {
+                cost = ((cost * 100) + (10 * 100)) / 100;
+            }
+
+            document.querySelector('.js-cost-display').innerHTML = `$${cost}`
+        }
+
+
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-button');
+
+            if (buttonElement.innerText === 'Subscribe') {
+                buttonElement.innerText = 'Subscribed';
+                buttonElement.classList.add("is-subscribed");
+            } else {
+                buttonElement.innerText = 'Subscribe';
+                buttonElement.classList.remove('is-subscribed');
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
