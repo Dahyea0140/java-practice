@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+}
+
+.h1{
+    text-align: center;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.h1__images{
+    margin: 2em auto;
+    padding: 5rem auto;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    gap: 1em;
+}
