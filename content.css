@@ -31,7 +31,12 @@ h2{
     text-align: center;
 }
 
-section {
+.series {
+    display: flex;
+    justify-content: space-between;
+}
+
+.series_details{
     width: 50vw;
     padding: 0.5rem 0.5rem;
     border: 1px solid black;
@@ -40,8 +45,34 @@ section {
     display: flow-root;
 }
 
-.series_cast{
+.top_cast_heading{
     text-align: right;
+    padding: 1em 1em;
+}
+
+
+.cast_member{
+    width: 250px;
+    display: flow-root;
+    padding: 10px;
+}
+
+/*desinging the profile pic of every cast member */
+.cast_member_1 {
+    width: 100px;
+    height: auto;
+    border: 1px solid aliceblue;
+    border-radius: 50%;
+    margin-left: 5px;
+    float: right;
+}
+
+/*flexing the parent to bring the name in the middel*/
+.cast_name{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }
 
 .dg_details {
@@ -53,3 +84,5 @@ section {
     float: left;
     margin-right: 1em;
 }
+
+
